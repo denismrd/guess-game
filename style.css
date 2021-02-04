@@ -23,6 +23,7 @@ main {
     justify-content: center;
     position: relative;
     height: 100%;
+    background-image: linear-gradient(to bottom right, white, rgb(85, 85, 85));
 }
 main > * {
     margin-bottom: 30px;
@@ -35,6 +36,7 @@ main > * {
     background-color: rgba(255, 255, 0, 0.467);
     top: 20px;
     right: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.371);
 }
 .score-box::after {
     content: "";
