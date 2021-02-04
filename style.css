@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Potta One", cursive;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+main > * {
+    margin-bottom: 30px;
+}
+.score-box {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 0, 0.467);
+    top: 20px;
+    right: 10px;
+}
+.score-box::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: black solid 2px;
+    height: 2px;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.426);
+    border-radius: 50%;
+}
+.text {
+    margin-bottom: 10px;
+}
+p span {
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 2px 6px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+input {
+    border-radius: 0px;
+    border: black solid 1px;
+    height: 20px;
+    width: 80px;
+    padding: 10px;
+    background-color: rgb(209, 209, 209);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+input:focus {
+    outline: none;
+    transform: scale(1.08);
+}
+.input-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: nowrap;
+}
+.input-box div {
+    content: "";
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.check {
+    padding: 3px 7px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+.sug-common {
+    padding: 5px 80px;
+    border-radius: 3px;
+    margin: 20px 0 40px 0;
+    transition: 0.3s;
+    font-weight: 900;
+    text-align: center;
+}
+@media (max-width: 350px) {
+    .sug-common {
+        padding: 5px 50px;
+    }
+}
+
+.suggestion-invalid {
+    border: red solid 1px;
+    background-color: rgba(255, 129, 70, 0.467);
+}
+.suggestion-valid {
+    border: blue solid 1px;
+    background-color: rgba(117, 218, 255, 0.303);
+}
+.suggestion-correct {
+    border: green solid 1px;
+    background-color: rgba(107, 255, 70, 0.467);
+}
+button.reload {
+    padding: 5px 20px;
+    border-radius: 4px;
+    background-color: rgb(243, 119, 2);
+    outline: none;
+    border: none;
+}
+button {
+    cursor: pointer;
+}

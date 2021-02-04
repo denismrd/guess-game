@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="head">Guess the number</header>
+        <main>
+            <div class="score-box">
+                <div class="text">SCORE</div>
+                <p class="score">12</p>
+            </div>
+            <p><span>!</span>The number is between 1 to 20....</p>
+
+            <div class="input-box">
+                <div></div>
+                <input type="text" />
+                <button class="check" onclick="handler()">Check !</button>
+            </div>
+
+            <div class="suggestion">Give a try</div>
+            <button class="reload" onclick="location.reload()">
+                Try again
+            </button>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
