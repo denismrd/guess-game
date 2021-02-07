@@ -1,4 +1,5 @@
 let rn = Math.floor(Math.random() * 19 + 1);
+document.querySelector(".revealer .back").textContent = rn;
 
 let mi = 1,
     ma = 20,
@@ -31,8 +32,9 @@ function handler() {
         sug.textContent = "Enter smaller number";
         sug.className = "sug-common suggestion-valid";
     } else {
-        sug.innerHTML = `You won the game !!!<br><br>SCORE : ${score}`;
+        sug.innerHTML = `You won the game !!!<br>SCORE : ${score}`;
         sug.className = "sug-common suggestion-correct";
+        revealer();
         ib.style.display = "inline-block";
     }
     scr.textContent = score;
@@ -40,11 +42,17 @@ function handler() {
 function checkscore() {
     if (score < 1) {
         sug.textContent = "GAME OVER";
-        sug.style.color = "red";
+        sug.style.color = " rgb(255, 107, 107)";
         sug.className = "sug-common suggestion-invalid";
         scr.textContent = score;
         ib.style.display = "inline-block";
+        revealer();
         return true;
     }
     return false;
+}
+function revealer() {
+    document.querySelector(".revealer .front").style.transform =
+        "rotateY(-180deg)";
+    document.querySelector(".revealer .back").style.transform = "rotateY(0deg)";
 }
